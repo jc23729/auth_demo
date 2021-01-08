@@ -58,7 +58,7 @@ def delete_tweet(id):
 
 @app.route('/register', methods=['GET', 'POST'])
 def register_user():
-    form = UserForm()
+    form = UserForm()##to make sure the userform is showing up, connected to register.html
     if form.validate_on_submit():
         username = form.username.data
         password = form.password.data
