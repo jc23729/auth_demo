@@ -6,12 +6,12 @@ db = SQLAlchemy()
 bcrypt = Bcrypt()
 
 
+
 def connect_db(app):
     """Connect to database."""
 
-    db.app = app
-    db.init_app(app)
-
+db.app = app
+db.init_app(app)
 
 class Tweet(db.Model):
     __tablename__ = 'tweets'
@@ -22,7 +22,7 @@ class Tweet(db.Model):
 
     user = db.relationship('User', backref="tweets")
 
-
+##Setting up User Model
 class User(db.Model):
 
     __tablename__ = 'users'
