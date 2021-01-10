@@ -53,7 +53,7 @@ def delete_tweet(id):
         flash("Tweet deleted!", "info")
         return redirect('/tweets')
     flash("You don't have permission to do that!", "danger")
-    return redirect('/tweets')
+    return redirect('/tweets')#redirecting to a new page
 
 
 @app.route('/register', methods=['GET', 'POST'])
